@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box;
+
+}
+body{
+  margin: 0px;
+  padding: 0px;
+  background-image: url(https://as1.ftcdn.net/jpg/03/32/65/66/500_F_332656608_lQLM4XPD6o7ij9Lfw5aMTU9GTBwJ9Lil.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  background-size: cover;
+  height: 30%;
+  width: 100%;
+
+
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-image: url(https://media.istockphoto.com/photos/aerial-view-of-umbrellas-palms-on-the-sandy-beach-of-indian-ocean-at-picture-id1136453253?s=612x612);
+  background-repeat: no-repeat;
+  background-position: center; */
+ background-color: #F5F5DC;
+}
+ul, li{
+  display:flex;
+  justify-content: space-around;
+  padding: 0px 10px ;
+  text-decoration: none;
+  }
+li {
+ text-decoration: none;
+ font-size: 16pt;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  padding:0px 20px;
+  font-size: 16pt;
+  font-weight: bold;
+  font-family: sans-serif;
+text-align: center;
+  background-color: #006400;
+  border-top-right-radius:25%;
+   border-bottom-right-radius:25%;
+}
+button{
+ padding:0px 20px;
+ font-size: 16pt;
+ font-weight: bold;
+ font-family: sans-serif;
+ border-top-left-radius:25%;
+  border-bottom-left-radius:25%;
+}
+@media screen and (max-width:800px) {
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+        font-size:8pt;
+        background-color: #F5F5DC;
+    }
+    li{
+        font-size:8pt;
+    }
+    button{
+        font-size:8pt;
+
+    }
+    .logo{
+        font-size:8pt;
+    }
+    }
+}

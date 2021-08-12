@@ -1,0 +1,486 @@
+/*
+1- commen styles
+2 Generak styles
+3- sections
+   3-1 home section
+   3-2 about section
+   3-3 protfolio section
+   3-4 Service section
+   3-5 prices section
+   3-6 team Section
+   3-7 Blog section
+   3-8 contact section
+    3.9 footer section
+
+
+
+
+/* ___1common styles  ___*/
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hover-opacity {
+  transition: opacity 0.5s;
+}
+.hover-opacity:hover {
+  opacity: 0.8;
+}
+.ltr-effect {
+  position: relative;
+}
+.ltr-effect:after {
+  position: absolute;
+  content: "";
+  width: 0;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #333;
+
+  transition: width 0.5s;
+  z-index: -1;
+}
+.ltr-effect:hover::after {
+  width: 100%;
+}
+
+/* -container
+   -opacity hover
+   -section padding
+   - hover effect 1 ( left to right)
+   - hover effct 2 ( top to bottom) */
+
+/*Gerneral css styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+}
+.clear {
+  clear: both;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: montserrat, sans-serif;
+}
+
+button {
+  font-family: "Varela Round", sans-serif;
+}
+
+a {
+  text-decoration: none; /*حذفنا الخطوط الي تحت الروابط*/
+}
+.pd-y {
+  padding: 120px 0px;
+}
+
+/*----------------------------------------------*/
+
+.section-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.section-header .section-title {
+  font-size: 35px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.section-header .line {
+  display: block;
+  height: 5px;
+  width: 60px;
+  background-color: #6195ff;
+  margin: 0px auto 70px;
+}
+/*----------------------------------------------*/
+/*3- section styles*/
+/* 3- 0 Header section */
+.header {
+  position: static;
+  width: 100%;
+  z-index: 10;
+
+}
+/* .header-content {
+   overflow: hidden; to slove float problem
+}*/
+.header .logo {
+  width: 25%;
+
+  float: left;
+}
+.header .logo img {
+  width: 20%;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.header .nav {
+
+
+  list-style: none;
+
+}
+.header .nav > li {
+  display: inline-block; /*لرتبنا العناصر الي جوا الليست لجنب بعض*/
+  text-align: center;
+}
+.header .nav > li > a {
+  /* استعديت الروابط ال هوا اسمو ايه بالانجلش*/
+  color:rgb(0, 0, 5); /*تغير لون الخط */
+  font-size: 20px;
+  display: block; /*الايه عنصر ان لاين لذا حولته هنا ل عنصر بلوك (a)*/
+  padding: 30px 15px; /*المسافة الفاصلة بين ال ال اي */
+}
+/*                  */
+.header .nav > li > a.active::after,
+.header .nav > li > a::after {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #6195ff;
+  margin: 2px;
+}
+
+.header .nav > li > a.active::after {
+  width: 100%;
+}
+.header .nav > li > a::after {
+  width: 0%;
+}
+
+.header .nav > li > a:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  background-color: #6195ff;
+  width: 130px;
+  text-align: center;
+  left: -50%;
+  top: 70%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s;
+}
+.dropdown-menu a {
+  color: #fff;
+  display: block;
+  padding: 10px;
+}
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+/* ------------------------------------*/
+.home {
+  height: 100vh;
+  background-image:url(https://www.meed.com/Uploads/NewsArticle/8762986/main3640.jpeg);
+  background-size: cover; /*هذه الخاصية بتاطبق الصورة مع الباك قراند وهي افضل شي */
+  position: relative;
+}
+.home-content {
+  position: absolute;
+  width: 65%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.home .titel {
+  color: #fff;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+.home .home-desc {
+  margin: 20px 0px;
+  color: white;
+  letter-spacing: 2px; /*ابعاد الحروف عن بعضها ضمن البرغراف*/
+  line-height: 1.5; /*بتفرق بين الاسطر*/
+}
+
+.home .btn {
+  min-width: 160px;
+  padding: 15px 0;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+.home .btn-start {
+  margin-right: 10px;
+  background-color: white;
+}
+.home .btn-learn {
+  background-color: #6195ff;
+  color: white;
+}
+/* about section*/
+
+.about-content {
+  overflow: hidden;
+}
+.about-item {
+  width: 30%;
+  float: left;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  padding: 50px 20px;
+}
+.about-item:hover .about-item-title {
+  color: rgb(218, 218, 218);
+}
+.about-item.mg {
+  margin: 0 5%;
+}
+.about-item .icon {
+  color: #6195ff;
+  margin-bottom: 10px;
+}
+.about-item.titel {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  transition: color 0.5s;
+}
+.about-item-desc {
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #999;
+}
+.about-item-link {
+  color: #6195ff;
+  text-transform: capitalize;
+}
+/* portfolio section*/
+.portfolio {
+  background: #f9f9f9;
+}
+.portfolio-content {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.portfolio-item {
+  width: 30%;
+  margin: 10px;
+  position: relative;
+
+}
+.portfolio-item .layer-content {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s;
+}
+.portfolio-item:hover .layer-content {
+  opacity: 1;
+  visibility: visible;
+}
+.layer-content .layer-info {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.layer-content .caregory {
+  color: #6195ff;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+  position: relative;
+  top: 10px;
+  opacity: 0;
+
+  transition: top 0.5s, opacity 0.5s;
+  transition-delay: 0.2s;
+}
+.layer-content-title {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+  position: relative;
+  top: 10px;
+  opacity: 0;
+
+  transition: top 0.6s, opacity 0.5s;
+  transition-delay: 0.3s;
+}
+.layer-content a {
+  color: #fff;
+  position: relative;
+  top: 10px;
+  opacity: 0;
+
+  transition: top 0.5s, opacity 0.5s;
+  transition-delay: 0.4s;
+}
+.layer-content a i {
+  display: inline-block;
+  line-height: 40px;
+  line-height: 40px;
+}
+.portfolio-item:hover .layer-content-title,
+.portfolio-item:hover .layer-content a,
+.portfolio-item:hover .layer-content .caregory {
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item.mg {
+  margin: 0 2%;
+}
+.portfolio-item img {
+  width: 100%;
+}
+/* offer section*/
+
+.offer-content {
+  overflow: hidden;
+}
+.offer-item {
+  width: 30%;
+  float: left;
+  margin-bottom: 50px;
+  border: 1px solid #e8e8e8;
+  padding: 30px 15px 30px 70px;
+}
+.offer-item.mg {
+  margin: 0 5%;
+}
+
+.offer-item .icon {
+  position: relative;
+  left: -43px;
+  top: -3px;
+  color: #6195ff;
+}
+
+.offer-item-title {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  position: relative;
+  top: -32px;
+  left: 7px;
+  transition: 0.5s;
+}
+
+.offer-item-desc {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #999;
+}
+.offer-item:hover .offer-item-title {
+  color: #fff;
+}
+
+/*service section*/
+.service {
+  background-color: #f9f9f9;
+}
+.service-item {
+  width: 50%;
+  float: left;
+}
+.service-item .section-header {
+  text-align: left;
+}
+
+.service-item .section-header .line {
+  margin: 0 0 40px 0;
+}
+.service-item-desc {
+  padding-right: 20px;
+  color: #999;
+  line-height: 1.5;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.service-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  position: relative;
+  margin-top: 80px;
+
+}
+.service-list  i {
+
+
+
+}
+.service-list h5 {
+float: right;
+right: 20px;
+}
+
+.service-list i {
+  font-size: 30pt;
+  color: #6195ff;
+}
+.service-item-img img {
+  width: 100%;
+}
+.service-bollets {
+  list-style: none;
+  text-align: center;
+}
+.service-bollets li {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: #e8e8e8;
+  border-radius: 50%;
+  margin: 10px 5px;
+}
+.service-bollets li.active {
+  background-color: #6195ff;
+}
+.service-bollets li:hover {
+  background-color: #6195ff;
+}
+
+/* item section*/
+/**/
+
+/* blog page */
+/* contact section*/

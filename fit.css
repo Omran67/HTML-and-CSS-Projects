@@ -1,0 +1,112 @@
+html {
+box-sizing: border-box;
+}
+body {
+padding: 0px;
+margin: 0px;
+}
+ header{
+border-bottom: 1px solid black;
+background-color: #8FBC8F;
+}
+ .menu{
+display:flex;
+align-items: center;
+color: black;
+margin:0px;
+}
+.menu, span{
+color: red;
+}
+.menu,p{
+font-size: 12pt;
+}
+.menu, ul{
+display: flex;
+justify-content: space-between;
+align-items: center;
+list-style-type: none;
+font-family: monospace;
+font-weight: bold;
+font-size: 16pt;
+}
+.menu, li{
+padding: 0px 20px;
+}
+.menu, li, a{
+text-decoration: none;
+color: black;
+}
+@media screen and (max-width:576px) {
+    nav {
+      display: flex;
+    }
+    li{
+
+    }
+    button{
+
+
+    }
+  {
+
+    }
+
+
+.row{
+  background-color:#FFFAF0;
+border-bottom: 1px solid black;
+
+}
+.container{
+width: 1000px;
+margin: 0 auto;
+min-height: 100px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+padding: 30px; 0;
+}
+.hero{
+background-color: #F8F8FF;
+margin-top: 20px;
+}
+.container {
+background-color: transparent;
+display:flex;
+flex-direction: row;
+
+}
+.article  {
+background-color:#F0FFF0;
+border: 1px solid black;
+
+}
+.double.article {
+
+}
+.article img{
+
+}
+.article h3{
+margin: 0px;
+text-align: center;
+}
+.article p{
+text-align: center;
+}
+h5{
+text-align: center;
+color: black;
+}
+.four{
+  background-color: transparent;
+}
+.four .container{
+  background-color: weight;
+}
+.four .article{
+
+}
+
+}
